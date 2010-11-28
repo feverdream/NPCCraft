@@ -24,11 +24,13 @@ public class NPCCraft extends Plugin {
     public void enable() {
         //Here is where We Add all the NPC's in the Database back to the map
         log.log(Level.INFO, "[*] NPCCraft enabled loading all NPC's");
+        LoadAll();
     }
 
     public void disable() {
         //Okay So The Plugin is Going Down So Lets Save the location of the NPC's
         log.log(Level.INFO, "[*] NPCCraft disabled saving all NPC's");
+        Save();
     }
 
      public void broadcast(String message) {
@@ -48,7 +50,7 @@ public class NPCCraft extends Plugin {
         log.log(Level.INFO, "[*] NPCCraft: Attempting to Connect to MySQL Database......");
         log.log(Level.INFO, "[*] NPCCraft: Database: {0}, Username: {1}, Password: {2}",new Object[]{});
         //Lets Try to connect to the Database shall we :)
-
+        SQLHelper.Connect();
         log.log(Level.INFO, "[*] NPCCraft: Creating Event Hooks......");
         // Uncomment as needed.
         //etc.getLoader().addListener( PluginLoader.Hook.ARM_SWING, l, this, PluginListener.Priority.MEDIUM);
@@ -98,6 +100,14 @@ public class NPCCraft extends Plugin {
      */
     public Runtime getRt() {
         return rt;
+    }
+
+    private void LoadAll() {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    private void Save() {
+        throw new UnsupportedOperationException("Not yet implemented");
     }
     public class Listener extends PluginListener {
         NPCCraft p;

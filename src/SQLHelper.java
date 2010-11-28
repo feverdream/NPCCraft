@@ -34,6 +34,20 @@ public class SQLHelper {
             }
         }
     }
+    public static void Disconnect(){
+        try{
+            conn.close();
+        }
+        catch(Exception ex){
+            NPCCraft.log.log(Level.WARNING, "[*] NPCCraft: {0}", ex.toString());
+
+        }
+        finally{
+             if(conn != null){
+                 NPCCraft.log.log(Level.INFO,  "[*] NPCCraft: Failed to Disconnect From Database!");
+            }
+        }
+    }
     public static String execQuery(String query) throws SQLException{
         String Res = null;
         Statement st = conn.createStatement();
@@ -42,7 +56,7 @@ public class SQLHelper {
         Res = rst.toString();
         return Res;
     }
-    public String sanitize( final String value ) {
+    public String sanitizeInput( final String value ) {
          if ( value == null )
              return null;
 
