@@ -1,0 +1,11 @@
+build/
+dist/
+bin/
+obj/
+*.suo
+*.user
+*.cache
+*.Cache
+*.ncb
+# Misc Ignores
+Thumbs.db
