@@ -1,11 +1,15 @@
 import net.minecraft.server.MinecraftServer;
 import java.util.List;
-
+/*
+ *  TODO: Update Obfuscated names
+ *
+ *
+ */
 public abstract class NPCHelper {
 	public static List players;
 
-	private ep user; // ep = user object
-	private gs handler; // gs = entity tracking handler
+	private ep user; // ep != user object ep == Mob Interface Now
+	private gs handler; // gs = entity tracking handler #may be the same
 
 	public NPCHelper(String name, double x, double y, double z, float rotation, float pitch, int itemInHand) {
 		if (players == null) getPlayerList();
