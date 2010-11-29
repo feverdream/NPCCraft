@@ -4,7 +4,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 29, 2010 at 12:03 AM
+-- Generation Time: Nov 29, 2010 at 12:11 AM
 -- Server version: 5.1.49
 -- PHP Version: 5.3.3-1ubuntu9.1
 
@@ -24,9 +24,6 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 --
 -- Table structure for table `npccraft`
---
--- Creation: Nov 29, 2010 at 12:02 AM
--- Last update: Nov 29, 2010 at 12:02 AM
 --
 
 CREATE TABLE IF NOT EXISTS `npccraft` (
@@ -60,6 +57,8 @@ CREATE TABLE IF NOT EXISTS `npccraft` (
   `npcbirth_loc_x` float NOT NULL,
   `npcbirth_loc_y` float NOT NULL,
   `npcbirth_loc_z` float NOT NULL,
+  `npcbuildmode` int(11) NOT NULL COMMENT '0 == off 1 == on',
+  `npcbuildmodeldir` varchar(200) NOT NULL,
   PRIMARY KEY (`npcid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
