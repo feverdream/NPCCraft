@@ -2,6 +2,8 @@ build/
 dist/
 bin/
 obj/
+nbproject/
+build.xml
 *.suo
 *.user
 *.cache
