@@ -9,10 +9,10 @@ Craftizens and it had NPC's and i got to thinking, 'Wow wouldn't a cool mod be t
 yes it would. so Thus NPCCraft is born it will be a mod that lets The Server Admin Create Living NPC's that can (hopefully) interact with you and the world. 
 
 ## Requirements:
-	<ul>
-		<li><a href="">Hay0's Minecraft Server mod </a></li>
-		<li>Server Running On MySQL</li>
-	</ul>
+<ul>
+<li><a href="">Hay0's Minecraft Server mod </a></li>
+<li>Server Running On MySQL</li>
+</ul>
 	
 ## Installation:
 
