@@ -23,35 +23,35 @@ No Instructions At this Current Point in Time
 To Crate an NPC you would issue the Command:
 
 <pre>
-/npcc mk <name> <aiscript> <alignment(good|evil|chaotic|neutral)> <boundaryname>
+/npcc mk [name] [aiscript] [alignment(good|evil|chaotic|neutral)] [boundaryname]
 </pre>
 
 To Remove an NPC you would issue the Command:
 
 <pre>
-/npcc rm <name>
+/npcc rmv [name]
 </pre>
 To alter The NPC's AI Script you would issue:
 
 <pre>
-/npcc edt ai <name> <aiscript>
+/npcc edt ai [name] [aiscript]
 </pre>
 To Alter The alignment of the NPC you would issue:
 
 <pre>
-/npcc edt alignment <name>  <alignment(good|evil|chaotic|neutral)>
+/npcc edt alignment [name]  [alignment(good|evil|chaotic|neutral)]
 </pre>
 To Alter The Boundary The NPC is Restricted to you would issue:
 
 <pre>
-/npcc edt boundary <name> <boundaryname>
+/npcc edt boundary [name] [boundaryname]
 </pre>
 Note: The NPC will warp to the center of the new boundary when the command is issued
 
 To Set the Home for the NPC you would issue:
 
 <pre>
-/npcc set home <name>
+/npcc set home [name]
 </pre>
 Note: The NPC will warp to the center its home
 Note: The NPC home will be set to your location from where you issued the command
@@ -72,15 +72,15 @@ To get info about the plugin and server:
 
 To Bring up help:
 <pre>
-/npcc help <if(!command) lists commands>
+/npcc help [if(!command) lists commands]
 </pre>
 <pre>
-/npcc ? <if(!command) lists commands>
+/npcc ? [if(!command) lists commands]
 </pre>
 
 To Edit the propertys file in game:
 <pre>
-/npcc cfg <get|set|toggle> <propnaem> <if(set) == propvalue>
+/npcc cfg [get|set|toggle] [propname] [if(set) == propvalue]
 </pre>
 
 ## FAQ:
