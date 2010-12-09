@@ -56,6 +56,33 @@ To Set the Home for the NPC you would issue:
 Note: The NPC will warp to the center its home
 Note: The NPC home will be set to your location from where you issued the command
 
+To list all NPC's
+<pre>
+/npcc list
+</pre>
+ To get the Plugin Version:
+<pre>
+/npcc version
+</pre>
+
+To get info about the plugin and server:
+<pre>
+/npcc about
+</pre>
+
+To Bring up help:
+<pre>
+/npcc help <if(!command) lists commands>
+</pre>
+<pre>
+/npcc ? <if(!command) lists commands>
+</pre>
+
+To Edit the propertys file in game:
+<pre>
+/npcc cfg <get|set|toggle> <propnaem> <if(set) == propvalue>
+</pre>
+
 ## FAQ:
 
 Q. Can I use Flatfile rather than MySql?

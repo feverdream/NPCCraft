@@ -15,4 +15,5 @@
 <li>Get NPC Boundarys To Keep the NPC in the selected Boundary</li>
 <li>Start on Random Model Building by NPC's</li>
 <li>Anything Else i can think of</li>
+<li>iConomy integration</li>
 </ul>
