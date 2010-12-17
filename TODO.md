@@ -1,4 +1,4 @@
-# TODO
+# TODO
 
 ## Critical TODO's
 <ul>
@@ -16,4 +16,6 @@
 <li>Start on Random Model Building by NPC's</li>
 <li>Anything Else i can think of</li>
 <li>iConomy integration</li>
+<li>Plugin System</li>
+<li>Cloan</li>
 </ul>

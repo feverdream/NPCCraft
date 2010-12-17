@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author vijay
  */
-public class NPC {
+public abstract class NPC {
     public static List players;
     private int        _itm;
     private Location   _loc;

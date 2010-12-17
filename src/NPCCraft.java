@@ -4,6 +4,7 @@ import java.awt.Color;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.net.ssl.SSLContext;
 
 /**
  *
@@ -15,7 +16,7 @@ public class NPCCraft extends Plugin {
     private static ConfigParser   cfgParser;
     private Listener              l    = new Listener(this);
     private String                name = "NPCCraft [ALPHA]";
-    private Server                s    = etc.getServer();
+    private  Server                s    = etc.getServer();
     private Runtime               rt   = java.lang.Runtime.getRuntime();
 
     public void enable() {
@@ -33,15 +34,7 @@ public class NPCCraft extends Plugin {
     }
 
     public void broadcast(String message) {
-        for (Player p : etc.getServer().getPlayerList()) {
-            p.sendMessage(message);
-        }
-    }
-
-    public void broadcast(String message, Color color) {
-        for (Player p : etc.getServer().getPlayerList()) {
-            p.sendMessage(color + message);
-        }
+      getS().messageAll(message);
     }
 
     @Override
@@ -177,7 +170,7 @@ public class NPCCraft extends Plugin {
 
                     try {}
                     finally {
-                        broadcast("NPC " + Pname + " has been created!", Color.green);
+                        broadcast("NPC " + Pname + " has been created!");
                     }
                 }
 
@@ -190,7 +183,7 @@ public class NPCCraft extends Plugin {
 
                     try {}
                     finally {
-                        broadcast("NPC " + Pname + " has been deleted!", Color.white);
+                        broadcast("NPC " + Pname + " has been deleted!");
                     }
                 }
 
@@ -205,7 +198,7 @@ public class NPCCraft extends Plugin {
 
                     try {}
                     finally {
-                        broadcast("NPC " + Pname + " has joined.", Color.green);
+                        broadcast("NPC " + Pname + " has joined.");
                     }
                 }
 
@@ -218,7 +211,7 @@ public class NPCCraft extends Plugin {
 
                     try {}
                     finally {
-                        broadcast("NPC " + Pname + " has leaft.", Color.WHITE);
+                        broadcast("NPC " + Pname + " has leaft.");
                     }
                 }
 
@@ -284,8 +277,8 @@ public class NPCCraft extends Plugin {
                         player.sendMessage("[*] OS: " + System.getProperty("os.name") + " "
                                            + System.getProperty("os.version") + " " + System.getProperty("os.arch")
                                            + " [*]");
-                        player.sendMessage("[*] " + s.getPlayerList().size() + " Players Online [*]");
-                        player.sendMessage("[*] Spawn Location: " + s.getSpawnLocation().toString() + " [*]");
+                        player.sendMessage("[*] " + getS().getPlayerList().size() + " Players Online [*]");
+                        player.sendMessage("[*] Spawn Location: " + getS().getSpawnLocation().toString() + " [*]");
                         player.sendMessage("[*] ====  End  Server Information ==== [*]");
                     } finally {}
                 }
@@ -338,14 +331,31 @@ public class NPCCraft extends Plugin {
                         }
                     }
 
-                    if (split[2].equals("set")) {}
+                    if (split[2].equals("set")) {
+                        try {
+
+                        } catch (Exception ex) {
+                            player.sendMessage(ex.getMessage());
+                        }
+                    }
 
                     if (split[2].equals("toggle")) {
                         try {
 
                         } catch (Exception ex) {
-
+                                player.sendMessage(ex.getMessage());
                         }
+                    }
+                }
+                if(split[1].equals("plugin")){
+                    if(split[2].equals("Load")){
+
+                    }
+                    if(split[2].equals( "unload")){
+
+                    }
+                    if(split[2].equals("reload")){
+
                     }
                 }
             }
@@ -371,8 +381,8 @@ public class NPCCraft extends Plugin {
                         player.sendMessage("[*] OS: " + System.getProperty("os.name") + " "
                                            + System.getProperty("os.version") + " " + System.getProperty("os.arch")
                                            + " [*]");
-                        player.sendMessage("[*] " + s.getPlayerList().size() + " Players Online [*]");
-                        player.sendMessage("[*] Spawn Location: " + s.getSpawnLocation().toString() + " [*]");
+                        player.sendMessage("[*] " + getS().getPlayerList().size() + " Players Online [*]");
+                        player.sendMessage("[*] Spawn Location: " + getS().getSpawnLocation().toString() + " [*]");
                         player.sendMessage("[*] ====  End  Server Information ==== [*]");
                     } finally {}
                 }
