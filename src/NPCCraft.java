@@ -357,6 +357,9 @@ public class NPCCraft extends Plugin {
                     if(split[2].equals("reload")){
 
                     }
+                    if(split[2].equals("exec")){
+
+                    }
                 }
             }
 
