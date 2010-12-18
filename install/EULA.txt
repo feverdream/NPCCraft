@@ -1,0 +1,13 @@
+From this point, NPCCraft or npcc for short will be refered to as "The program" and XAMPP will be refered to as "The Developer". 
+License for The program: 
+The program is distributed as freeware. This means: 
+1. All copyrights to The program are exclusively owned by its author: Trutia Alexandru. 
+2. Anyone may use The program as much as they want on any number of computers for any legal purpose. The program may not be rented or leased, but may be permanently transferred, in it's entirety, if the person receiving it agrees to the terms of this license and if the original package is not modified in any way. You are free to distribute the installers created with this program, without having to pay any royalties to The Developer. 
+3. The program may be freely distributed, with exceptions noted below, provided the distribution package is not modified in any way. No person or company may distribute separate parts of the package without written permission of the The Developer. The program may not be distributed inside of any other software package without written permission of The Developer. Hacks/cracks, keys or key generators may not be included on the same distribution. 
+4. You Understand and acknowledge that The Developer of The Program Has full access to all commands for debugging purposes 
+5. THE PROGRAM IS DISTRIBUTED "AS IS". NO WARRANTY OF ANY KIND IS EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. YOU USE THE PROGRAM AT YOUR OWN RISK. NEITHER THE AUTHOR(S) NOR THE AGENT(S) OF THE AUTHOR(S) WILL BE LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE. 
+6. You may not use, copy, emulate, clone, rent, lease, sell, modify, decompile, disassemble, otherwise reverse engineer, or transfer The program, or any subset of The program, except as provided for in this agreement. Any such unauthorized use shall result in immediate and automatic termination of this license and may result in criminal and/or civil prosecution. 
+7. All rights not expressly granted here are reserved by Trutia Alexandru. Any of the terms can be changed at any time without prior notice. 
+8. Installing and using The program signifies acceptance of these terms and conditions of this license. 
+9. If you do not agree with the terms of this license you must remove The program files from your storage devices and cease to use the product. 
+End of license. 
